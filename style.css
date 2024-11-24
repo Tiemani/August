@@ -1,24 +1,59 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    box-sizing: border-box;
-}
-html{
-    scroll-behavior: smooth;
-}
-body{
-    background: #080808;
-    color: #fff;
-}
-
-        /* Style for the title (page tab) */
-title {
-            color: blue;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            color: #333;
         }
 
-        /* Style for h1 and h2 elements */
-h1, h2 {
-            color: skyblue;
+        h1, h2 {
+    background-color: #FFF;
+    color: #172B4D;
+    
         }
 
+        ol {
+            margin-left: 20px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        a {
+            color: darkblue;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-left: 3px solid #ccc;
+            overflow-x: auto;
+        }
+
+        /* Responsive styling */
+        @media (max-width: 600px) {
+            body {
+                margin: 10px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            h2 {
+                font-size: 1.2em;
+            }
+
+            ol {
+                margin-left: 10px;
+            }
+
+            pre {
+                font-size: 0.9em;
+            }
+        }
