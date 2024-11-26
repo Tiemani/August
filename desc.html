@@ -1,39 +1,138 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="index.css">
+    <title>Bamboo: A Powerful CI/CD Platform for Streamlined Development</title>
+    <link rel="stylesheet" href="style.css">
+  
 </head>
+    <style>
+         .back-link {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 10px 15px;
+            background-color: #172B4D;;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .back-link:hover {
+            background-color: #172B4D;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                padding: 15px;
+            }
+        }
+    </style>
 <body>
-    <header>
-        <h1>BAMBOO PROJECT</h1>
-    </header>
+    <h1>Bamboo: A Powerful CI/CD Platform for Streamlined Development</h1>
+    <p>Bamboo is a continuous integration and continuous delivery (CI/CD) platform developed by Atlassian. It automates the building, testing, and deployment processes, allowing developers to concentrate on coding and creation. Seamlessly integrating with other Atlassian tools like Jira and Bitbucket, Bamboo provides a cohesive development environment.</p>
     
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div class="project">
-            <h3>INSTALLATION AND CONFIGURATION OF BAMBOO CI/CD Tool</h3>
-            <a href="index.html">View Project Description</a>
-            <br>
-            <a href="Thirdpage.html">Installation of Bamboo</a>
-        </div>
-        <!-- Add more projects as needed -->
-    </section>
-     <br>
-     <br>
-    <footer>
-        <p>© 2024 BAMBOO PROJECT</p>
-    </footer>
-    <script src="script.js">
-        
-    // You can add interactivity here if needed
-    document.querySelector('form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        alert('Thank you for your message!');
-    });
-    </script>
+    <h2>Top 10 Use Cases of Bamboo:</h2>
+    <ol>
+        <li><strong>Automated Builds and Testing:</strong> Run builds and execute tests automatically after each code change, offering fast feedback and early detection of issues.</li>
+        <li><strong>Continuous Delivery:</strong> Automate deployments to various environments, such as development, staging, or production, with customizable workflows.</li>
+        <li><strong>Parallel Building and Testing:</strong> Conduct builds and tests concurrently to shorten feedback times and accelerate development cycles.</li>
+        <li><strong>Scalability and Flexibility:</strong> Tailor Bamboo to your project needs using a range of plugins, environments, and build stages.</li>
+        <li><strong>Collaboration and Visibility:</strong> Share build history, reports, and notifications to improve team transparency and collaboration.</li>
+        <li><strong>Security and Reliability:</strong> Secure your code with access controls and security scans to ensure build integrity and stability.</li>
+        <li><strong>Support for Diverse Languages and Frameworks:</strong> Integrate with multiple languages like Java, Python, Ruby, JavaScript, and popular frameworks including Django, Rails, and Spring Boot.</li>
+        <li><strong>Customizable Pipelines:</strong> Create precise CI/CD workflows using custom scripts, plugins, and environment variables.</li>
+        <li><strong>Integration with Other Tools:</strong> Connect Bamboo with existing tools like Git repositories, issue trackers, and deployment platforms.</li>
+        <li><strong>Enhanced Efficiency and Productivity:</strong> Automate manual build and deployment tasks, freeing developers to focus on impactful feature development.</li>
+    </ol>
 
+    <p>Bamboo offers even more features and capabilities, making it a comprehensive tool for managing every aspect of a CI/CD pipeline.</p>
+    <a href="javascript:history.back()" class="back-link">Go Back</a>
+
+    <h2>Install Bamboo on Linux</h2>
+    <ol>
+        <li><strong>Download Bamboo:</strong> Download the file for your operating system from <a href="https://www.atlassian.com/software/bamboo/download" target="_blank">Atlassian Bamboo Download</a>
+            <ul>
+                <li>tar.gz for MacOS or Linux distributions.</li>
+                <li>zip for Windows.</li>
+            </ul>
+        </li>
+        <li><strong>Create the installation directory:</strong>
+            <ul>
+                <li>a) Extract the downloaded file to an install location.</li>
+                <li>b) The path to the extracted directory is referred to as the <em>Bamboo installation directory</em> in these instructions.</li>
+            </ul>
+        </li>
+        <li><strong>Create the home directory:</strong> Specify your Bamboo home directory, where your Bamboo data is stored, before you run Bamboo for the first time.
+            <ul>
+                <li>a) Create your Bamboo home directory (without spaces in the name).</li>
+                <li>Note: You should not create your Bamboo home directory inside the <em>Bamboo installation directory</em> — they should be entirely separate locations. If you do put the home directory in the <em>Bamboo installation directory</em> it will be overwritten and lost when Bamboo is upgraded.</li>
+                <li>b) Open <em><Bamboo installation directory>/atlassian-bamboo/WEB-INF/classes/bamboo-init.properties</em>.</li>
+                <li>c) Uncomment the bamboo.home line.</li>
+                <li>d) Provide the absolute path to the bamboo-home directory.
+                    <pre>bamboo.home=/var/bamboo/bamboo-home</pre>
+                </li>
+            </ul>
+        </li>
+        <li><strong>Start Bamboo:</strong>
+            <ul>
+                <li>a) In the command line, change the directory to <em><Bamboo installation directory></em> and run the commands to start Bamboo:
+                    <pre>$ cd <Bamboo installation directory></pre>
+                    <pre>$ ./bin/start-bamboo.sh</pre>
+                </li>
+                <li>b) After successfully starting Bamboo, you will find it online at <a href="http://localhost:8085/" target="_blank">http://localhost:8085/</a>.</li>
+            </ul>
+        </li>
+        <li><strong>Configure Bamboo:</strong> You are starting Bamboo for the first time, so you will need to follow the Setup Wizard to configure Bamboo. See <em>Running the Setup Wizard</em>.</li>
+        <li><strong>Start using Bamboo:</strong> That's it! Your Bamboo site is accessible from a URL like this: <code>http://&lt;computer_name_or_IP_address&gt;:&lt;port&gt;</code>.</li>
+        <li><strong>If you want your Bamboo instance always running:</strong> Check how to run Bamboo as a service.</li>
+    </ol>
+
+    <h2>Installing Bamboo on Windows</h2>
+
+<p>In this guide, we'll run you through installing Bamboo with an external database on Windows.</p>
+
+<h3>Before You Begin</h3>
+<p>Before you install Bamboo, there are a few questions you need to answer:</p>
+<ul>
+    <li><strong>Are you using a supported operating system?</strong> <a href="#">Tell me more...</a></li>
+    <li><strong>Is your JAVA_HOME variable set correctly?</strong> <a href="#">Tell me more...</a></li>
+</ul>
+
+<h3>Install Bamboo</h3>
+<ol>
+    <li><strong>Download Bamboo:</strong>
+        <p>Download Bamboo from the Atlassian download site.</p>
+        <p>It is highly recommended to avoid placing the Bamboo home directory in any Windows security-controlled directory, for example, <code>C:\Program Files</code>, <code>C:\Users</code>, <code>C:\Windows</code>.</p>
+        <p>Extract the files from the zip archive to a <em>Bamboo installation directory</em> of your choice. By default, the root directory in your zip file is named "Bamboo".</p>
+        <p><strong>Warning: Some unzip programs cause errors</strong><br>
+        Some archive-extract programs cause errors when unzipping the Bamboo archive file. We highly recommend that you use the free 7Zip archive-extract program (if in doubt, download the '32-bit .exe' version).</p>
+        <p>Set up your Bamboo home directory — this is the directory where Bamboo will store its root configuration data. To do this, edit the file named <code>bamboo-init.properties</code> in the <em><Bamboo installation directory>/atlassian-bamboo/WEB-INF/classes/</em> directory. In this file, insert the property <code>bamboo.home</code>, with an absolute path to your Bamboo home directory. Your file should look something like this:</p>
+        <pre>bamboo.home=C:/test/bamboo-home</pre>
+        <p>Alternatively, you can specify an environment variable <code>BAMBOO_HOME</code> which specifies the absolute path to your Bamboo home directory. Bamboo will check if an environment variable is defined.</p>
+        <p>If you are going to use Bamboo remote agents, set the following in the <code>bamboo-init.properties</code> file in the <em><Bamboo installation directory>/atlassian-bamboo/WEB-INF/classes</em> directory:</p>
+        <pre>bamboo.jms.broker.uri=tcp://localhost:54663</pre>
+        <p>Replace 'localhost' with the real host name or IP address of your Bamboo server. If port number <code>54663</code> is already in use, specify a different port number.</p>
+    </li>
+    <li><strong>Start Bamboo:</strong>
+        <ul>
+            <li>a) In the command line, change the directory to <em><Bamboo installation directory></em> and run the command to start Bamboo:
+                <pre>$ cd <Bamboo installation directory></pre>
+                <pre>$ bin\start-bamboo.bat</pre>
+            </li>
+            <li>b) After successfully starting Bamboo, you will find it online at <a href="http://localhost:8085/" target="_blank">http://localhost:8085/</a>.</li>
+        </ul>
+    </li>
+    <li><strong>Configure Bamboo:</strong>
+        <p>You are starting Bamboo for the first time, so you will need to follow the Setup Wizard to configure Bamboo. See <em>Running the Setup Wizard</em>.</p>
+    </li>
+    <li><strong>Start Using Bamboo:</strong>
+        <p>That's it! Your Bamboo site is accessible from a URL like this: <code>http://&lt;computer_name_or_IP_address&gt;:&lt;port&gt;</code>.</p>
+    </li>
+    <li><strong>If you want your Bamboo instance always running:</strong> Check how to run Bamboo as a service.</li>
+</ol>
 
 </body>
 </html>
