@@ -90,49 +90,7 @@
         <li><strong>If you want your Bamboo instance always running:</strong> Check how to run Bamboo as a service.</li>
     </ol>
 
-    <h2>Installing Bamboo on Windows</h2>
 
-<p>In this guide, we'll run you through installing Bamboo with an external database on Windows.</p>
-
-<h3>Before You Begin</h3>
-<p>Before you install Bamboo, there are a few questions you need to answer:</p>
-<ul>
-    <li><strong>Are you using a supported operating system?</strong> <a href="#">Tell me more...</a></li>
-    <li><strong>Is your JAVA_HOME variable set correctly?</strong> <a href="#">Tell me more...</a></li>
-</ul>
-
-<h3>Install Bamboo</h3>
-<ol>
-    <li><strong>Download Bamboo:</strong>
-        <p>Download Bamboo from the Atlassian download site.</p>
-        <p>It is highly recommended to avoid placing the Bamboo home directory in any Windows security-controlled directory, for example, <code>C:\Program Files</code>, <code>C:\Users</code>, <code>C:\Windows</code>.</p>
-        <p>Extract the files from the zip archive to a <em>Bamboo installation directory</em> of your choice. By default, the root directory in your zip file is named "Bamboo".</p>
-        <p><strong>Warning: Some unzip programs cause errors</strong><br>
-        Some archive-extract programs cause errors when unzipping the Bamboo archive file. We highly recommend that you use the free 7Zip archive-extract program (if in doubt, download the '32-bit .exe' version).</p>
-        <p>Set up your Bamboo home directory — this is the directory where Bamboo will store its root configuration data. To do this, edit the file named <code>bamboo-init.properties</code> in the <em><Bamboo installation directory>/atlassian-bamboo/WEB-INF/classes/</em> directory. In this file, insert the property <code>bamboo.home</code>, with an absolute path to your Bamboo home directory. Your file should look something like this:</p>
-        <pre>bamboo.home=C:/test/bamboo-home</pre>
-        <p>Alternatively, you can specify an environment variable <code>BAMBOO_HOME</code> which specifies the absolute path to your Bamboo home directory. Bamboo will check if an environment variable is defined.</p>
-        <p>If you are going to use Bamboo remote agents, set the following in the <code>bamboo-init.properties</code> file in the <em><Bamboo installation directory>/atlassian-bamboo/WEB-INF/classes</em> directory:</p>
-        <pre>bamboo.jms.broker.uri=tcp://localhost:54663</pre>
-        <p>Replace 'localhost' with the real host name or IP address of your Bamboo server. If port number <code>54663</code> is already in use, specify a different port number.</p>
-    </li>
-    <li><strong>Start Bamboo:</strong>
-        <ul>
-            <li>a) In the command line, change the directory to <em><Bamboo installation directory></em> and run the command to start Bamboo:
-                <pre>$ cd <Bamboo installation directory></pre>
-                <pre>$ bin\start-bamboo.bat</pre>
-            </li>
-            <li>b) After successfully starting Bamboo, you will find it online at <a href="http://localhost:8085/" target="_blank">http://localhost:8085/</a>.</li>
-        </ul>
-    </li>
-    <li><strong>Configure Bamboo:</strong>
-        <p>You are starting Bamboo for the first time, so you will need to follow the Setup Wizard to configure Bamboo. See <em>Running the Setup Wizard</em>.</p>
-    </li>
-    <li><strong>Start Using Bamboo:</strong>
-        <p>That's it! Your Bamboo site is accessible from a URL like this: <code>http://&lt;computer_name_or_IP_address&gt;:&lt;port&gt;</code>.</p>
-    </li>
-    <li><strong>If you want your Bamboo instance always running:</strong> Check how to run Bamboo as a service.</li>
-</ol>
 
 </body>
 </html>
