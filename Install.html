@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bamboo Installation</title>
+  </head>
+    <body>
+      <h2>Install Bamboo on Linux</h2>
+    <ol>
+        <li><strong>Download Bamboo:</strong> Download the file for your operating system from <a href="https://www.atlassian.com/software/bamboo/download" target="_blank">Atlassian Bamboo Download</a>
+            <ul>
+                <li>tar.gz for MacOS or Linux distributions.</li>
+                <li>zip for Windows.</li>
+            </ul>
+        </li>
+        <li><strong>Create the installation directory:</strong>
+            <ul>
+                <li>a) Extract the downloaded file to an install location.</li>
+                <li>b) The path to the extracted directory is referred to as the <em>Bamboo installation directory</em> in these instructions.</li>
+            </ul>
+        </li>
+        <li><strong>Create the home directory:</strong> Specify your Bamboo home directory, where your Bamboo data is stored, before you run Bamboo for the first time.
+            <ul>
+                <li>a) Create your Bamboo home directory (without spaces in the name).</li>
+                <li>Note: You should not create your Bamboo home directory inside the <em>Bamboo installation directory</em> — they should be entirely separate locations. If you do put the home directory in the <em>Bamboo installation directory</em> it will be overwritten and lost when Bamboo is upgraded.</li>
+                <li>b) Open <em><Bamboo installation directory>/atlassian-bamboo/WEB-INF/classes/bamboo-init.properties</em>.</li>
+                <li>c) Uncomment the bamboo.home line.</li>
+                <li>d) Provide the absolute path to the bamboo-home directory.
+                    <pre>bamboo.home=/var/bamboo/bamboo-home</pre>
+                </li>
+            </ul>
+        </li>
+        <li><strong>Start Bamboo:</strong>
+            <ul>
+                <li>a) In the command line, change the directory to <em><Bamboo installation directory></em> and run the commands to start Bamboo:
+                    <pre>$ cd <Bamboo installation directory></pre>
+                    <pre>$ ./bin/start-bamboo.sh</pre>
+                </li>
+                <li>b) After successfully starting Bamboo, you will find it online at <a href="http://localhost:8085/" target="_blank">http://localhost:8085/</a>.</li>
+            </ul>
+        </li>
+        <li><strong>Configure Bamboo:</strong> You are starting Bamboo for the first time, so you will need to follow the Setup Wizard to configure Bamboo. See <em>Running the Setup Wizard</em>.</li>
+        <li><strong>Start using Bamboo:</strong> That's it! Your Bamboo site is accessible from a URL like this: <code>http://&lt;computer_name_or_IP_address&gt;:&lt;port&gt;</code>.</li>
+        <li><strong>If you want your Bamboo instance always running:</strong> Check how to run Bamboo as a service.</li>
+    </ol>
 
+    </body>
+
+</html>
