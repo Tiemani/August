@@ -57,3 +57,24 @@
                 font-size: 0.9em;
             }
         }
+.back-link {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 10px 15px;
+            background-color: #172B4D;;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .back-link:hover {
+            background-color: #172B4D;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                padding: 15px;
+            }
+        }
