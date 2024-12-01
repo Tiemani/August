@@ -25,14 +25,17 @@
         </li>
         <li><strong>Create the home directory:</strong> Specify your Bamboo home directory, where your Bamboo data is stored, before you run Bamboo for the first time.
             <ul>
-                <li>a) Create your Bamboo home directory (without spaces in the name).</li>
+                <li>a) Create your Bamboo home directory (without spaces in the name) By typing the command.</li>
+              <li>  <pre>$ /opt/bamboo</pre> </li>
+                <li> 
                 <li>Note: You should not create your Bamboo home directory inside the <em>Bamboo installation directory</em> — they should be entirely separate locations. If you do put the home directory in the <em>Bamboo installation directory</em> it will be overwritten and lost when Bamboo is upgraded.</li>
                 <li>b) Open <em><Bamboo installation directory>/atlassian-bamboo/WEB-INF/classes/bamboo-init.properties</em>.</li>
                 <img src="Bamboo Installation/Screenshot from 2024-11-28 14-46-41.png" alt"">
                 <li>c) Uncomment the bamboo.home line.</li>
                 <li>d) Provide the absolute path to the bamboo-home directory.
-                    <pre>bamboo.home=/var/bamboo/bamboo-home</pre>
+                    <pre>bamboo.home=/opt/bamboo/</pre>
                 </li>
+                <img src="Bamboo Installation/Screenshot from 2024-11-28 14-47-55.png" alt"">
             </ul>
         </li>
         <li><strong>Start Bamboo:</strong>
