@@ -32,7 +32,7 @@
                 <li>b) Open <em><Bamboo installation directory>/atlassian-bamboo/WEB-INF/classes/bamboo-init.properties</em>.</li>
                 <img src="Bamboo Installation/Screenshot from 2024-11-28 14-46-41.png" alt"">
                 <li>c) Uncomment the bamboo.home line : Type the command <pre>sudo vi bamboo-init.properties</pre>.</li>
-                <li>d) Provide the absolute path to the bamboo-home directory.In the vi console look for the line "#bamboo.home" and uncomment it by removing the "#" infront of it.
+                <li>d) Provide the absolute path to the bamboo-home directory.In the vi console look for the line <strong>"#bamboo.home"</strong> and uncomment it by removing the "#" infront of it.
                     <pre>bamboo.home=/opt/bamboo/</pre>
                 </li>
                 After doing this save and quit.
@@ -41,12 +41,13 @@
         </li>
         <li><strong>Start Bamboo:</strong>
             <ul>
-                <li>a) In the command line, change the directory to <em><Bamboo installation directory></em> and run the commands to start Bamboo:
-                    <pre>$ cd ../../../bin <Bamboo installation directory></pre> to access the bin folder. Then type the command
-                    <pre>$ ./bin/start-bamboo.sh</pre>
+                <li>a) In the command line, change the directory to access the bin folder <em><Bamboo installation directory></em> and run the commands to start Bamboo:
+                    <pre>$ cd ../../../bin <Bamboo installation directory></pre> 
+                    <pre>$ sudo ./bin/start-bamboo.sh</pre>
                     <img src="Bamboo Installation/Screenshot from 2024-11-28 15-24-26.png" alt"">
                 </li>
                 <li>b) After successfully starting Bamboo, you will find it online at <a href="http://localhost:8085/" target="_blank">http://localhost:8085/</a>.</li>
+                    <img src="Bamboo Installation/Screenshot from 2024-11-28 15-29-16.png" alt"">
             </ul>
         </li>
         <li><strong>Configure Bamboo:</strong> You are starting Bamboo for the first time, so you will need to follow the Setup Wizard to configure Bamboo. See <em>Running the Setup Wizard</em>.</li>
